@@ -1,11 +1,16 @@
-import React, { Component } from "react";
+import React from "react";
+import Topic from './Topic';
 
-class Topics extends Component {
-  render(props) {
-    return(
-      <div className="container--narrow container-float-left">Topics</div>
+const Topics = ({topics}) => {
+    return (
+      <div className="container container--narrow">
+        <ul>
+        {topics.map(topic => {
+          return <Topic key={topic.name} topic={topic}></Topic>;
+        })}
+        </ul>
+      </div>
     );
-  }
-}
+};
 
 export default Topics;

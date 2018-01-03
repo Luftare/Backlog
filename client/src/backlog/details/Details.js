@@ -1,11 +1,14 @@
-import React, { Component } from "react";
+import React from 'react';
+import Detail from './Detail';
 
-class Details extends Component {
-  render(props) {
-    return(
-      <div className="container--wide">Details...</div>
-    );
-  }
-}
+const Details = ({topic}) => {
+  if(!topic) return null;
+  return(
+    <div className="container container--wide">
+      <Detail topic={topic}></Detail>
+    </div>
+  );
+};
+
 
 export default Details;
