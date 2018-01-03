@@ -1,0 +1,19 @@
+html, body {
+  background-color: #EEE;
+}
+
+.container--narrow {
+  display: block;
+  background-color: red;
+  width: 300px;
+}
+
+.container-float-left {
+  float: left;
+}
+
+.container--wide {
+  display: block;
+  background-color: blue;
+  width: 100%;
+}
