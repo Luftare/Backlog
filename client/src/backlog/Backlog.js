@@ -25,7 +25,7 @@ class Backlog extends Component {
 
   render() {
     return (
-      <div className="wrapper">
+      <div className="l-wrapper">
         <header>APP NAME</header>
         <Topics topics={this.state.topics} selectTopic={this.selectTopic}></Topics>
         <Details topic={this.state.selectedTopic}></Details>

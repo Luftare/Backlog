@@ -2,23 +2,23 @@ html, body {
   background-color: #EEE;
 }
 
-.wrapper {
+.l-wrapper {
   display: flex;
   align-items: stretch;
   height: 100vh;
   width: 100%;
 }
 
-.container {
+.l-container {
 
 }
 
-.container--narrow {
+.l-container--narrow {
   background-color: salmon;
-  flex-grow: 1;
+  flex: 0 0 230px;
 }
 
-.container--wide {
+.l-container--wide {
   background-color: lightblue;
   flex-grow: 3;
 }

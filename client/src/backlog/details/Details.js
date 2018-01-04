@@ -4,7 +4,7 @@ import Detail from './Detail';
 const Details = ({topic}) => {
   if(!topic) return null;
   return(
-    <div className="container container--wide">
+    <div className="l-container l-container--wide">
       <Detail topic={topic}></Detail>
     </div>
   );
