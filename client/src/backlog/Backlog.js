@@ -40,7 +40,7 @@ class Backlog extends Component {
         <div className="header header--accent">Skill backlog</div>
         <div className="l-wrapper">
           <Epics epics={this.state.epics} selectedEpic={this.state.selectedEpic} selectEpic={this.selectEpic}></Epics>
-          <Topics topics={this.state.topics} selectedTopic={this.state.selectedTopic} selectTopic={this.selectTopic}></Topics>
+          <Topics topics={this.state.topics} selectedTopic={this.state.selectedTopic} selectedEpic={this.state.selectedEpic} selectTopic={this.selectTopic}></Topics>
           <Details topic={this.state.selectedTopic}></Details>
         </div>
       </div>
