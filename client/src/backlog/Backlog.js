@@ -39,8 +39,8 @@ class Backlog extends Component {
   render() {
     return (
       <div className="l-wrapper">
-        <Epics epics={this.state.epics} selectEpic={this.selectEpic}></Epics>
-        <Topics topics={this.state.topics} selectTopic={this.selectTopic}></Topics>
+        <Epics epics={this.state.epics} selectedEpic={this.state.selectedEpic} selectEpic={this.selectEpic}></Epics>
+        <Topics topics={this.state.topics} selectedTopic={this.state.selectedTopic} selectTopic={this.selectTopic}></Topics>
         <Details topic={this.state.selectedTopic}></Details>
       </div>
     );
