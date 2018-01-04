@@ -1,5 +1,6 @@
 html, body {
   background-color: #EEE;
+  color: #111;
 }
 
 .l-wrapper {
@@ -14,11 +15,33 @@ html, body {
 }
 
 .l-container--narrow {
-  background-color: salmon;
   flex: 0 0 230px;
 }
 
 .l-container--wide {
-  background-color: lightblue;
-  flex-grow: 3;
+  flex-grow: 1;
+}
+
+.l-container--bright {
+  background-color: #EEE;
+}
+
+.l-container--dark {
+  background-color: #444;
+  color: #EEE;
+}
+
+.l-container--accent {
+  background-color: #4EA;
+}
+
+.l-container__article {
+  padding-left: 10px;
+}
+
+.category {
+  list-style-type: none;
+  list-style: none;
+  padding: 0;
+  margin: 0;
 }
