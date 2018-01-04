@@ -3,10 +3,29 @@ html, body {
   color: #111;
 }
 
+.header {
+  padding: 5px 5px;
+  margin: 0px;
+  font-size: 46px;
+  font-weight: lighter;
+}
+
+.header--accent {
+  color: #4EA;
+  background-color: #444;
+}
+
+.l-app {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  width: 100%;
+}
+
 .l-wrapper {
   display: flex;
   align-items: stretch;
-  height: 100vh;
+  height: 100%;
   width: 100%;
 }
 
