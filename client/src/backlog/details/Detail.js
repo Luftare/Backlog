@@ -5,7 +5,6 @@ const Detail = ({topic}) => {
     <div>
       <h3>{topic.name}</h3>
       <p>{topic.description}</p>
-      asd
     </div>
   );
 };
