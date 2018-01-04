@@ -1,8 +1,8 @@
 import React from 'react';
 
-const Topic = ({topic}) => {
+const Topic = ({topic, selectTopic}) => {
   return (
-    <li>{topic.name}</li>
+    <li onClick={e => selectTopic(topic)}>{topic.name}</li>
   );
 };
 
