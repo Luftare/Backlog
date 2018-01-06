@@ -12,33 +12,37 @@ class Backlog extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      selectedTopic: null,
-      selectedEpic: null,
+      selectedTopicName: null,
+      selectedEpicName: null,
     };
 
     this.props.backlogActions.fetchEpics();
 
     this.selectTopic = topic => {
-      const selectedTopic = this.props.backlog.topics.find(tpc => tpc === topic);
-      this.setState({selectedTopic});
+      const selectedTopicName = topic.name;
+      this.setState({selectedTopicName});
     };
 
     this.selectEpic = epic => {
-      const selectedEpic = this.props.backlog.epics.find(epc => epc === epic);
-      this.props.backlogActions.fetchTopics();//TODO: Add argument
-      this.setState({selectedEpic});
+      const selectedEpicName = epic.name;
+      this.props.backlogActions.fetchTopics();
+      this.setState({selectedEpicName});
     };
   }
 
   render() {
-    const {epics, topics} = this.props.backlog;
+    const {epics, topics} = this.props;
+    const {updateTopicDescription} = this.props.backlogActions;
+    const selectedTopic = this.state.selectedTopicName? topics.find(tpc => tpc.name === this.state.selectedTopicName) : null;
+    const selectedEpic = this.state.selectedEpicName? epics.find(epc => epc.name === this.state.selectedEpicName) : null;
+
     return (
       <div className="l-app">
         <div className="header header--accent">Skill backlog</div>
         <div className="l-wrapper">
-          <Epics epics={epics} selectedEpic={this.state.selectedEpic} selectEpic={this.selectEpic}></Epics>
-          <Topics topics={topics} selectedTopic={this.state.selectedTopic} selectedEpic={this.state.selectedEpic} selectTopic={this.selectTopic}></Topics>
-          <Details topic={this.state.selectedTopic}></Details>
+          <Epics epics={epics} selectedEpic={selectedEpic} selectEpic={this.selectEpic}></Epics>
+          <Topics topics={topics} selectedTopic={selectedTopic} selectedEpic={selectedEpic} selectTopic={this.selectTopic}></Topics>
+          <Details topic={selectedTopic} updateTopicDescription={updateTopicDescription}></Details>
         </div>
       </div>
     );
@@ -47,7 +51,8 @@ class Backlog extends Component {
 
 function mapStateToProps(state) {
     return {
-        backlog: state.backlogReducer
+        topics: state.backlogReducer.topics,
+        epics: state.backlogReducer.epics,
     };
 }
 

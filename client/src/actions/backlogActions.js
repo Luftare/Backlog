@@ -25,3 +25,7 @@ export function fetchTopics() {
     ]))
   };
 }
+
+export function updateTopicDescription(topic, newDescription) {
+  return {type: allActions.UPDATE_TOPIC_DESCRIPTION, topic, newDescription};
+}
