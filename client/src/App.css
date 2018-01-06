@@ -58,6 +58,11 @@ html, body {
   padding-left: 10px;
 }
 
+.l-container__textarea {
+  width: 80%;
+  height: 400px;
+}
+
 .category {
   list-style-type: none;
   list-style: none;
