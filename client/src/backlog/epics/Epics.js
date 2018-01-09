@@ -24,7 +24,7 @@ class Epics extends Component {
 
     this.deleteEpic = (e, epic) => {
       e.stopPropagation();
-      
+
     };
 
     this.cancelInput = () => {
@@ -41,10 +41,16 @@ class Epics extends Component {
           return <Epic key={epic.name} selectEpic={selectEpic} deleteVisible={this.state.deleteVisible} deleteEpic={this.deleteEpic} selectedEpic={selectedEpic} epic={epic}></Epic>;
         })}
         </ul>
-        {this.state.inputVisible? <input type="text" /> : null}
+        {this.state.inputVisible? <input type="text" className="category__input"/> : null}
         {this.state.inputVisible
-          ? <span><button onClick={this.submitEpic}>-></button><button onClick={this.cancelInput}>x</button></span>
-          : <span><button onClick={this.showInput}>+</button><button onClick={this.toggleShowDelete}>-</button></span>
+          ? <span>
+              <button className="category__button" onClick={this.submitEpic}>-></button>
+              <button className="category__button" onClick={this.cancelInput}>x</button>
+            </span>
+          : <span>
+              <button className="category__button" onClick={this.showInput}>+</button>
+              <button className="category__button" onClick={this.toggleShowDelete}>-</button>
+            </span>
         }
 
       </div>
