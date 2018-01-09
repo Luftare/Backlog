@@ -41,12 +41,18 @@ class Topics extends Component {
           return <Topic key={topic.name} selectedTopic={selectedTopic} deleteTopic={this.deleteTopic} deleteVisible={this.state.deleteVisible} selectTopic={selectTopic} topic={topic}></Topic>;
         })}
         </ul>
-        {this.state.inputVisible? <input type="text" /> : null}
+        {this.state.inputVisible? <input type="text"  className="category__input" /> : null}
         {selectedEpic
           ? (
             this.state.inputVisible
-              ? <span><button onClick={this.submitTopic}>-></button><button onClick={this.cancelInput}>x</button></span>
-              : <span><button onClick={this.showInput}>+</button><button onClick={this.toggleShowDelete}>-</button></span>
+              ? <span>
+                  <button className="category__button" onClick={this.submitTopic}>-></button>
+                  <button className="category__button" onClick={this.cancelInput}>x</button>
+                </span>
+              : <span>
+                  <button className="category__button" onClick={this.showInput}>+</button>
+                  <button className="category__button" onClick={this.toggleShowDelete}>-</button>
+                </span>
           )
           : null}
       </div>

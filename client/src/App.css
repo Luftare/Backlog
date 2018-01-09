@@ -71,7 +71,7 @@ html, body {
 }
 
 .category__item {
-  padding: 5px;
+  padding: 5px 0px;
   margin-bottom: 2px;
   cursor: pointer;
 }
@@ -82,4 +82,26 @@ html, body {
 
 .category__item--active {
   font-weight: bold;
+}
+
+.category__item-content {
+  margin-left: 5px;
+}
+
+.category__button {
+  background-color: #FFF;
+  color: #111;
+  margin-left: 5px;
+  height: 18px;
+  border: none;
+  border-radius: 3px;
+}
+
+.category__button--dark {
+  background-color: #444;
+  color: #FFF;
+}
+
+.category__input {
+  margin-left: 5px;
 }
